@@ -29,7 +29,7 @@ import io.swagger.annotations.ApiOperation;
 @Api(value="CustomerController", description = "Customer related services", tags=("CustomerController"))
 public class CustomerController {
 
-	private static final Logger logger = LoggerFactory.getLogger(TransporterController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CustomerController.class);
 	
 	@Autowired
 	private CustomerService customerService;

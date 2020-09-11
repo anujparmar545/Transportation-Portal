@@ -10,7 +10,7 @@ import com.anuj.entities.Customer;
 public interface CustomerRepository extends CrudRepository<Customer, Integer>{
 
 	Customer findById(int id);
-	
+	Customer findByUsernameAndPassword(String username, String password);
 }
 
 

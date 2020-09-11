@@ -11,6 +11,7 @@ public interface TransporterRepository extends CrudRepository<Transporter, Integ
 
 	Transporter findByUsername(String username);
 	Transporter findById(int id);
+	Transporter findByUsernameAndPassword(String username, String password);
 }
 
 

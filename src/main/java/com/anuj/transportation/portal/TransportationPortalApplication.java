@@ -32,7 +32,7 @@ public class TransportationPortalApplication {
 	                .apis(RequestHandlerSelectors.basePackage("com.anuj.controllers"))
 	                .paths(any()).build().apiInfo(new ApiInfo("Transportation Portal",
 	                        "A set of services to provide data access to Customer", "1.0.0", null,
-	                        new Contact("Anuj Parmar", "https://github.com/anujparmar545", null),null, null));
+	                        new Contact("Anuj Parmar", "https://github.com/anujparmar545/Transportation-Portal", null),null, null));
 	    }
 	  
 	
