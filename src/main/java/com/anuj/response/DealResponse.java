@@ -38,6 +38,7 @@ public class DealResponse implements Serializable{
 	private String price;
 	private Date start_date;
 	private Date return_date;
+	private int status;
 	
 	private int vehicle_id;
 	private int transporter_id;
@@ -53,7 +54,7 @@ public class DealResponse implements Serializable{
 		this.id = id;
 	}
 
-	public DealResponse(int id, String source, String destination, String price, Date start_date, Date return_date,
+	public DealResponse(int id, String source, String destination, String price, Date start_date, Date return_date,int status,
 			int vehicle_id, int transporter_id) {
 		super();
 		this.id = id;
@@ -62,6 +63,7 @@ public class DealResponse implements Serializable{
 		this.price = price;
 		this.start_date = start_date;
 		this.return_date = return_date;
+		this.status=status;
 		this.vehicle_id = vehicle_id;
 		this.transporter_id = transporter_id;
 	}
@@ -112,6 +114,14 @@ public class DealResponse implements Serializable{
 
 	public void setReturn_date(Date return_date) {
 		this.return_date = return_date;
+	}
+	
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	public int getVehicle_id() {

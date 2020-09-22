@@ -1,5 +1,7 @@
 package com.anuj.repository;
 
+import java.util.List;
+
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +13,7 @@ public interface CustomerRepository extends CrudRepository<Customer, Integer>{
 
 	Customer findById(int id);
 	Customer findByUsernameAndPassword(String username, String password);
+	List<Customer> findAll();
 }
 
 

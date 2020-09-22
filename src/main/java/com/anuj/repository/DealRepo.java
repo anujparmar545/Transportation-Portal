@@ -27,7 +27,7 @@ public class DealRepo {
 		
 		long millis=System.currentTimeMillis(); 
 		Date date= new Date(millis);
-		String s= "select * from deal where start_date<= :currentDate and return_date>=:currentDate";
+		String s= "select * from Deal where start_date<= :currentDate and return_date>=:currentDate";
 		
 		Query query=entityManager.createNativeQuery(s,Tuple.class);
 		query.setParameter("currentDate", date);

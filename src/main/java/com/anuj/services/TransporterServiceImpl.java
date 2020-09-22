@@ -101,6 +101,7 @@ public class TransporterServiceImpl implements TransporterService {
 		deal.setReturn_date(request.getReturn_date());
 		deal.setSource(request.getSource());
 		deal.setStart_date(request.getStart_date());
+		deal.setStatus(0);
 		
 		Transporter transporter=transporterRepository.findById(request.getTransporter_id());
 		deal.setTransporter(transporter);
@@ -116,6 +117,7 @@ public class TransporterServiceImpl implements TransporterService {
 		response.setReturn_date(deal1.getReturn_date());
 		response.setSource(deal1.getSource());
 		response.setStart_date(deal1.getStart_date());
+		response.setStatus(deal1.getStatus());
 		response.setTransporter_id(deal1.getTransporter().getId());
 		response.setVehicle_id(deal1.getVehicle().getId());
 		
@@ -138,6 +140,7 @@ public class TransporterServiceImpl implements TransporterService {
 			response.setReturn_date(deal.getReturn_date());
 			response.setSource(deal.getSource());
 			response.setStart_date(deal.getStart_date());
+			response.setStatus(deal.getStatus());
 			response.setTransporter_id(deal.getTransporter().getId());
 			response.setVehicle_id(deal.getVehicle().getId());
 			

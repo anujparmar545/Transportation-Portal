@@ -30,10 +30,9 @@ public class Deal {
 	private String source;
 	private String destination;
 	private String price;
-	
 	private Date start_date;
-	
 	private Date return_date;
+	private int status;
 	
 	
 	@ManyToOne
@@ -56,7 +55,7 @@ public class Deal {
 		this.id = id;
 	}
 
-	public Deal(int id, String source, String destination,String price, Date start_date, Date return_date, Vehicle vehicle,
+	public Deal(int id, String source, String destination,String price, Date start_date, Date return_date,int status, Vehicle vehicle,
 			Transporter transporter, List<Query> query) {
 		super();
 		this.id = id;
@@ -65,6 +64,7 @@ public class Deal {
 		this.price=price;
 		this.start_date = start_date;
 		this.return_date = return_date;
+		this.status=status;
 		this.vehicle = vehicle;
 		this.transporter = transporter;
 		this.query = query;
@@ -118,6 +118,14 @@ public class Deal {
 
 	public void setReturn_date(Date return_date) {
 		this.return_date = return_date;
+	}
+	
+	public int getStatus() {
+		return status;
+	}
+
+	public void setStatus(int status) {
+		this.status = status;
 	}
 
 	public Vehicle getVehicle() {
